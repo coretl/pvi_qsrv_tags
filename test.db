@@ -1,0 +1,20 @@
+record(ao, "EXAMPLE:Position") {
+    field(VAL, "2")
+    field(PINI, "YES")
+    info(Q:group, {"EXAMPLE:PVI": {"pvi.Position.w": {+channel:"NAME", +type:"plain"}}})
+}
+record(ai, "EXAMPLE:Position_RBV") {
+    field(VAL, "1")
+    field(PINI, "YES")
+    info(Q:group, {"EXAMPLE:PVI": {"pvi.Position.r": {+channel:"NAME", +type:"plain"}}})
+}
+record(ao, "EXAMPLE:Record") {
+    field(VAL, "1")
+    field(PINI, "YES")
+    info(Q:group, {"EXAMPLE:PVI": {"pvi.Record.rw": {+channel:"NAME", +type:"plain"}}})
+}
+record(ao, "EXAMPLE:Go") {
+    field(VAL, "1")
+    field(PINI, "YES")
+    info(Q:group, {"EXAMPLE:PVI": {"pvi.Go.x": {+channel:"NAME", +type:"plain"}}})
+}
