@@ -67,7 +67,8 @@ record(waveform, "PANDAQSRV:SEQ1:TABLE:REPEATS")
         "PANDAQSRV:SEQ1:TABLE": {
             "value.repeats": {
                 "+type": "plain",
-                "+channel": "VAL"
+                "+channel": "VAL",
+                "+putorder":0
             }
         }
     })
@@ -82,7 +83,8 @@ record(waveform, "PANDAQSRV:SEQ1:TABLE:TRIGGER")
         "PANDAQSRV:SEQ1:TABLE": {
             "value.trigger": {
                 "+type": "plain",
-                "+channel": "VAL"
+                "+channel": "VAL",
+                "+putorder":1
             }
         }
     })
@@ -97,7 +99,8 @@ record(waveform, "PANDAQSRV:SEQ1:TABLE:POSITION")
         "PANDAQSRV:SEQ1:TABLE": {
             "value.position": {
                 "+type": "plain",
-                "+channel": "VAL"
+                "+channel": "VAL",
+                "+putorder":2
             }
         }
     })
@@ -112,7 +115,8 @@ record(waveform, "PANDAQSRV:SEQ1:TABLE:TIME1")
         "PANDAQSRV:SEQ1:TABLE": {
             "value.time1": {
                 "+type": "plain",
-                "+channel": "VAL"
+                "+channel": "VAL",
+                "+putorder":3
             }
         }
     })
@@ -127,7 +131,8 @@ record(waveform, "PANDAQSRV:SEQ1:TABLE:OUTA1")
         "PANDAQSRV:SEQ1:TABLE": {
             "value.outa1": {
                 "+type": "plain",
-                "+channel": "VAL"
+                "+channel": "VAL",
+                "+putorder":4
             }
         }
     })
@@ -142,7 +147,8 @@ record(waveform, "PANDAQSRV:SEQ1:TABLE:OUTB1")
         "PANDAQSRV:SEQ1:TABLE": {
             "value.outb1": {
                 "+type": "plain",
-                "+channel": "VAL"
+                "+channel": "VAL",
+                "+putorder":5
             }
         }
     })
@@ -157,7 +163,8 @@ record(waveform, "PANDAQSRV:SEQ1:TABLE:OUTC1")
         "PANDAQSRV:SEQ1:TABLE": {
             "value.outc1": {
                 "+type": "plain",
-                "+channel": "VAL"
+                "+channel": "VAL",
+                "+putorder":6
             }
         }
     })
@@ -172,7 +179,8 @@ record(waveform, "PANDAQSRV:SEQ1:TABLE:OUTD1")
         "PANDAQSRV:SEQ1:TABLE": {
             "value.outd1": {
                 "+type": "plain",
-                "+channel": "VAL"
+                "+channel": "VAL",
+                "+putorder":7
             }
         }
     })
@@ -187,7 +195,8 @@ record(waveform, "PANDAQSRV:SEQ1:TABLE:OUTE1")
         "PANDAQSRV:SEQ1:TABLE": {
             "value.oute1": {
                 "+type": "plain",
-                "+channel": "VAL"
+                "+channel": "VAL",
+                "+putorder":8
             }
         }
     })
@@ -202,7 +211,8 @@ record(waveform, "PANDAQSRV:SEQ1:TABLE:OUTF1")
         "PANDAQSRV:SEQ1:TABLE": {
             "value.outf1": {
                 "+type": "plain",
-                "+channel": "VAL"
+                "+channel": "VAL",
+                "+putorder":9
             }
         }
     })
@@ -217,7 +227,8 @@ record(waveform, "PANDAQSRV:SEQ1:TABLE:TIME2")
         "PANDAQSRV:SEQ1:TABLE": {
             "value.time2": {
                 "+type": "plain",
-                "+channel": "VAL"
+                "+channel": "VAL",
+                "+putorder":10
             }
         }
     })
@@ -232,7 +243,8 @@ record(waveform, "PANDAQSRV:SEQ1:TABLE:OUTA2")
         "PANDAQSRV:SEQ1:TABLE": {
             "value.outa2": {
                 "+type": "plain",
-                "+channel": "VAL"
+                "+channel": "VAL",
+                "+putorder":11
             }
         }
     })
@@ -247,7 +259,8 @@ record(waveform, "PANDAQSRV:SEQ1:TABLE:OUTB2")
         "PANDAQSRV:SEQ1:TABLE": {
             "value.outb2": {
                 "+type": "plain",
-                "+channel": "VAL"
+                "+channel": "VAL",
+                "+putorder":12
             }
         }
     })
@@ -262,7 +275,8 @@ record(waveform, "PANDAQSRV:SEQ1:TABLE:OUTC2")
         "PANDAQSRV:SEQ1:TABLE": {
             "value.outc2": {
                 "+type": "plain",
-                "+channel": "VAL"
+                "+channel": "VAL",
+                "+putorder":13
             }
         }
     })
@@ -277,7 +291,8 @@ record(waveform, "PANDAQSRV:SEQ1:TABLE:OUTD2")
         "PANDAQSRV:SEQ1:TABLE": {
             "value.outd2": {
                 "+type": "plain",
-                "+channel": "VAL"
+                "+channel": "VAL",
+                "+putorder":14
             }
         }
     })
@@ -292,7 +307,8 @@ record(waveform, "PANDAQSRV:SEQ1:TABLE:OUTE2")
         "PANDAQSRV:SEQ1:TABLE": {
             "value.oute2": {
                 "+type": "plain",
-                "+channel": "VAL"
+                "+channel": "VAL",
+                "+putorder":15
             }
         }
     })
@@ -308,7 +324,8 @@ record(waveform, "PANDAQSRV:SEQ1:TABLE:OUTF2")
         "PANDAQSRV:SEQ1:TABLE": {
             "value.outf2": {
                 "+type": "plain",
-                "+channel": "VAL"
+                "+channel": "VAL",
+                "+putorder":16
             },
             "": {"+type": "meta", "+channel": "VAL"},
         }
@@ -324,7 +341,8 @@ record(stringin, "PANDAQSRV:SEQ1:TABLE:_PVI")
         "PANDAQSRV:SEQ1:PVI": {
             "pvi.table.rw": {
                 "+channel": "VAL",
-                "+type": "plain"
+                "+type": "plain",
+                "+putorder":17
             }
         }
     })
@@ -338,7 +356,8 @@ record(stringin, "PANDAQSRV:SEQ1:_PVI")
         "PANDAQSRV:PVI": {
             "pvi.seq1.d": {
                 "+channel": "VAL",
-                "+type": "plain"
+                "+type": "plain",
+                "+putorder":18
             }
         }
     })
