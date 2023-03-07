@@ -54,24 +54,7 @@ PANDAQSRV:SEQ1:TABLE epics:nt/NTTable:1.0
         structure _options
             uint queueSize 0
             boolean atomic true
-    structure value
-        ubyte[] oute1 [1,0,1,0]
-        string[] trigger [POSA>=POSITION, POSA<=POSITION, Immediate, Immediate]
-        uint[] time2 [0,10,10,11]
-        uint[] time1 [5,0,10,10]
-        ushort[] repeats [1,1,1,32]
-        int[] position [3222,-565,0,0]
-        ubyte[] outf2 [1,0,0,0]
-        ubyte[] outf1 [1,0,0,0]
-        ubyte[] oute2 [1,0,1,0]
-        ubyte[] outd2 [1,1,0,1]
-        ubyte[] outd1 [1,1,0,1]
-        ubyte[] outc2 [0,1,1,0]
-        ubyte[] outc1 [0,1,1,0]
-        ubyte[] outb2 [0,0,1,1]
-        ubyte[] outb1 [0,0,1,1]
-        ubyte[] outa2 [1,0,0,1]
-        ubyte[] outa1 [1,0,0,1]
+    string[] labels [Repeats, Trigger, Position, Time1, OutA1, OutB1, OutC1, OutD1, OutE1, OutF1, Time2, OutA2, OutB2, OutC2, OutD2, OutE2, OutF2]
     alarm_t alarm INVALID DRIVER UDF 
         int severity 3
         int status 2
@@ -79,8 +62,25 @@ PANDAQSRV:SEQ1:TABLE epics:nt/NTTable:1.0
     time_t timeStamp <undefined>              
         long secondsPastEpoch 631152000
         int nanoseconds 0
-        int userTag 0        
-    string[] labels [Repeats, Trigger, Position, Time1, OutA1, OutB1, OutC1, OutD1, OutE1, OutF1, Time2, OutA2, OutB2, OutC2, OutD2, OutE2, OutF2]
+        int userTag 0            
+    structure value
+        ushort[] repeats [1,1,1,32]
+        string[] trigger [POSA>=POSITION, POSA<=POSITION, Immediate, Immediate]
+        int[] position [3222,-565,0,0]
+        uint[] time1 [5,0,10,10]
+        ubyte[] outa1 [1,0,0,1]
+        ubyte[] outb1 [0,0,1,1]
+        ubyte[] outc1 [0,1,1,0]
+        ubyte[] outd1 [1,1,0,1]
+        ubyte[] oute1 [1,0,1,0]
+        ubyte[] outf1 [1,0,0,0]
+        uint[] time2 [0,10,10,11]
+        ubyte[] outa2 [1,0,0,1]
+        ubyte[] outb2 [0,0,1,1]
+        ubyte[] outc2 [0,1,1,0]
+        ubyte[] outd2 [1,1,0,1]
+        ubyte[] oute2 [1,0,1,0]
+        ubyte[] outf2 [1,0,0,0]
 ```
 Getting this field we see an NTTable field. Note that the labels don't match the value structure order at the moment, this will change after https://github.com/epics-base/pva2pva/issues/53
 
