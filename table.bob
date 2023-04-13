@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<display version="2.0.0">
+  <name>Display</name>
+  <widget type="table" version="2.0.0">
+    <name>Table</name>
+    <pv_name>pva://PANDAQSRV:SEQ1:STRTABLE</pv_name>
+    <x>70</x>
+    <y>190</y>
+    <width>410</width>
+    <editable>false</editable>
+  </widget>
+</display>

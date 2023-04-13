@@ -92,3 +92,7 @@ Getting this field we see an NTTable field. Note that the labels don't match the
   - If it has an `r` and a `w` or an `rw` it is an `EpicsSignalRW`
   - If it has only an `r` it is an `EpicsSignalR`
   - If it has only a `w` it is an `EpicsSignalW`
+
+## Phoebus
+
+``phoebus.sh`` then load ``table.bob``. This works for string tables, but not for any other datatypes at present

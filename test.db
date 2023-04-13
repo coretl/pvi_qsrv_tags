@@ -26,6 +26,14 @@ record(ao, "PANDAQSRV:PULSE1:WIDTH")
     })
 }
 
+record(waveform, "BOOL:PLEASE")
+{
+    field(NELM, 10)
+    field(FTVL, "ENUM")
+    field(INP, [0, 0, 1, 1, 0, 1, 1, 0])
+    info(Q:form, "Binary")
+}
+
 # We want to add PANDAQSRV:PULSE1 to PANDAQSRV:PVI
 # structure, but we can't create a record called
 # PANDAQSRV:PVI as it will shadow the QSRV created structure.
@@ -363,3 +371,53 @@ record(stringin, "PANDAQSRV:SEQ1:_PVI")
     })
 }
 
+
+
+record(waveform, "PANDAQSRV:SEQ1:STRTABLE:LABELS") {
+    field(FTVL, "STRING")
+    field(NELM, "64")
+    field(INP , {const:["Col1", "Col2"]})
+    info(Q:group, {
+        "PANDAQSRV:SEQ1:STRTABLE": {
+            "+id": "epics:nt/NTTable:1.0",
+            "labels": {
+                "+type": "plain",
+                "+channel": "VAL"
+            }
+        }
+    })
+}
+
+record(waveform, "PANDAQSRV:SEQ1:STRTABLE:COL1")
+{
+    field(FTVL, "STRING")
+    field(NELM, "64")
+    field(INP, {const:["Foo", "Bar"]})
+    info(Q:group, {
+        "PANDAQSRV:SEQ1:STRTABLE": {
+            "value.col1": {
+                "+type": "plain",
+                "+channel": "VAL",
+                "+putorder":1
+            },
+        }
+    })
+}
+
+record(waveform, "PANDAQSRV:SEQ1:STRTABLE:COL2")
+{
+    field(FTVL, "STRING")
+    field(NELM, "64")
+    field(INP, {const:["Bat", "Baz"]})
+    field(PINI, "YES")
+    info(Q:group, {
+        "PANDAQSRV:SEQ1:STRTABLE": {
+            "value.col2": {
+                "+type": "plain",
+                "+channel": "VAL",
+                "+putorder":2
+            },
+            "": {"+type": "meta", "+channel": "VAL"},
+        }
+    })
+}
