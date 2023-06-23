@@ -421,3 +421,30 @@ record(waveform, "PANDAQSRV:SEQ1:STRTABLE:COL2")
         }
     })
 }
+
+
+record(ao, "PANDAQSRV:PCAP:ARM")
+{
+    info(Q:group, {
+        "PANDAQSRV:PCAP:PVI": {
+            "pvi.arm.x": {
+                "+channel": "NAME",
+                "+type": "plain"
+            }
+        }
+    })
+}
+
+
+record(stringin, "PANDAQSRV:PCAP:_PVI")
+{
+    field(VAL,  "PANDAQSRV:PCAP:PVI")
+    info(Q:group, {
+        "PANDAQSRV:PVI": {
+            "pvi.pcap.d": {
+                "+channel": "VAL",
+                "+type": "plain"
+            }
+        }
+    })
+}
